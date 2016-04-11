@@ -1,0 +1,4 @@
+.scrapy
+data
+*.db
+*.pyc
