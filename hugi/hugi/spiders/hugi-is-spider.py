@@ -135,7 +135,7 @@ class HugiSpider(scrapy.Spider):
             tags = soup.find_all(class_=k)
             for tag in tags:
                 tag.extract()
-        article_category, article_type = urlparse(response.url).path.split("/")[1:-3]
+        article_category, article_type = urlparse(response.url).path.split("/")[1:3]
         title = soup.find(class_="article content").h1.text
         id = soup.find(class_="article content")["id"]
         content = soup.find(class_="articlebody")
